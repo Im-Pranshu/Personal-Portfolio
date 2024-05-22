@@ -1,0 +1,183 @@
+#contact{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 20px 20px 20px 20px;
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px 10px orange;
+    padding: 1px;
+    height: 90vh;
+    position: relative;
+    overflow: scroll;
+}
+
+.light #contact{
+    box-shadow: 0px 0px 10px 8px skyblue;
+}
+
+#contact::-webkit-scrollbar{
+    display: none;
+}
+
+#contact h1{
+    align-items: start;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-shadow: 3px 3px 5px 2px orange;
+}
+
+.light #contact h1{
+    box-shadow: 3px 3px 5px 2px skyblue;
+}
+
+#spanContactMe{
+    color: orange ;
+}
+
+.light #spanContactMe{
+    color: skyblue ;
+}
+
+.blurBg{
+    background-image: url('../../assets/contact_bg.jpg');
+    /* Add the blur effect */
+    filter: blur(10px);
+    border-radius: 50px;
+    /* Full height and widht */
+    height: 100%;
+    width: 100%;
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.contDetail{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.light .contDetail h3{
+    color: white;
+}
+
+.contactForm{
+    margin: 30px;
+    overflow: hidden;
+}
+
+.fname input{
+    width: 350px;
+    margin: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.152);
+    border-radius: 15px;
+    border: 1px solid orange;
+}
+
+.light .fname input{
+    border: 1px solid skyblue;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+}
+
+.details input, .details textarea{
+    margin: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.152);
+    border-radius: 15px;
+    border: 1px solid orange;
+    color: white;
+}
+
+.light .details input, .light .details textarea{
+    border: 1px solid skyblue;
+}
+
+.details textarea{
+    min-height: 70px;
+    min-width: 400px;
+    max-width: 720px;
+    max-height: 120px;
+
+}
+
+#submit{
+    border: 2px solid orange;
+    display: flex;
+    background: none;
+    padding: 12px;
+    border: 2px solid orange;
+    border-radius: 10px;
+    margin: 20px auto 20px auto;
+    transition: 0.8s;
+}
+
+.light #submit{
+    border: 2px solid skyblue;
+}
+
+#submit:hover{
+    transition: 0.8s;
+    color: black;
+    background-color: orange;
+    border: 2px solid white;
+}
+
+.light #submit:hover{
+    background-color: skyblue;
+}
+
+/* CSS for the modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: black;
+    border-radius: 30px;
+    box-shadow: 0px 0px 6px orange;
+    filter: drop-shadow(0px 0px 5px orange);
+    margin: 12% auto;
+    padding: 20px;
+    border: 1px solid orange;
+    width: 80%;
+  }
+  
+  .close {
+    color: white;
+    float: right;
+    filter: drop-shadow(0px 0px 5px orange);
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: orange;
+    filter: drop-shadow(0px 0px 5px white);
+    text-decoration: none;
+    cursor: pointer;
+  }

@@ -1,0 +1,168 @@
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed; 
+    top: 0px;
+    left: 20px;
+    z-index: 999;
+    margin: 15px 5px;
+    width: 95%;
+    padding: 15px 5%;
+    height: fit-content;
+    background-color: #000000e5;
+    border-radius: 30px;
+    box-shadow: 0px 0px 20px 8px orange;
+}
+  
+/* @keyframes logo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+.logo {
+  width: fit-content;
+  height: 45px;
+  color: white;
+  background-color: #000000;
+  padding: 0px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 1px rgba(255, 166, 0, 0.931);
+  will-change: filter;
+  transition: filter,transform 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 12px orange);
+  transform: scale(1.2);
+}
+
+nav ul{
+    list-style: none;
+    flex: 1;
+    text-align: center;
+}
+
+nav > ul li{
+  display: inline-block;
+  margin-right: 15px;
+  font-size: large;
+  padding: 8px;
+  border-radius: 10px;
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition-timing-function: ease;
+  transition-delay: 0.1s;
+}
+
+nav li:hover{
+    transform: translateY(-6px);
+    box-shadow: 3px 3px 4px  orange;
+}
+
+.light nav li:hover{
+    box-shadow: 3px 3px 4px  skyblue;
+}
+
+/* **************Light Mode************** */
+.toggleLight{
+  /* filter: invert(100%); */
+  border-radius: 50%;
+  background-color: white;
+}
+.lightModeBtn{
+  margin-right: 25px;
+  padding: 1px;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background-color: black;
+}
+button.lightModeBtn:hover{
+  filter: invert(100%);
+  /* This animation line applies the rotation animation. */
+  /* animation: logo infinite 5s linear; */
+}
+
+/* **************Dark Mode************** */
+.toggleDark{
+  filter: invert(100%);
+  border-radius: 50%;
+  background-color: white;
+}
+.darkModeBtn{
+  margin-right: 25px;
+  padding: 1px;
+  width: 29px;
+  height: 29px;
+  border-radius: 50%;
+  background-color: white;
+}
+button.darkModeBtn:hover{
+  filter: invert(100%);
+  /* This animation line applies the rotation animation. */
+  /* animation: logo infinite 5s linear; */
+}
+
+button.contactBtn:hover{
+  filter: none;
+  transform: scale(1.1);
+  background-color: orange;
+  box-shadow: 0px 0px 5px 2px white;
+  color: #000000;
+}
+
+#navBtn:focus,
+#navBtn:focus-visible {
+  outline: 2px auto -webkit-focus-ring-color;
+} 
+
+#navBtn > a:hover{
+  color: black;
+}
+
+.light nav{
+  background: #7a7a7af4;
+  border-radius: 30px;
+  box-shadow: 0px 0px 10px 8px skyblue;
+}
+
+.light .logo{
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: 0px 0px 10px 1px black;
+}
+.light .logo:hover{
+  box-shadow: 0px 0px 10px 1px skyblue;
+  filter: drop-shadow(0px 0px 5px skyblue);
+}
+
+.light #navBtn{
+  background: rgba(255, 255, 255, 0.76);
+  color: black;
+  box-shadow: 0px 0px 10px 1px black;
+  transition: ease-in-out 0.3s;
+}
+
+.light #navBtn:hover{
+  transition: ease-in-out 0.3s;
+  background-color: skyblue;
+  box-shadow: 0px 0px 15px black;
+  border: 1px solid black ;
+}
+
+
+@media (min-width:650px) and (max-width:900px){
+  nav{
+    width: 93vw;
+  }
+}
+
+@media (max-width:650px){
+  nav{
+    width: 90vw;
+  }
+}

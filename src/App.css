@@ -1,0 +1,58 @@
+:root {
+  margin: 0;
+  color-scheme: light dark;
+  background-color: black;
+}
+
+:root::after{
+  transition: 0s;
+}
+
+.light .navBar{
+  background-color: #fff;
+}
+
+#home{
+  height: fit-content;
+}
+
+#components{
+  width: 100%;
+  height: 100vh;
+  margin: 40px 0px 40px 0px;
+}
+
+#footer{
+  height: fit-content;
+  margin-top: 20px;
+}
+
+a{
+  font-weight: 500;
+  color: white;
+  text-decoration: inherit;
+}
+a:hover {
+  color: orange;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em; 
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: black;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 2px orange;
+  cursor: pointer;
+  will-change: filter;
+  transition: border-color,filter,transform 200ms ease 0s;
+}
+
+button:hover {
+  border-color: orange;
+  filter: drop-shadow(0 0 8px orange);
+  transform: scale(1.3);
+}
