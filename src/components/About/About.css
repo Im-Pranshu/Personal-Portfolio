@@ -3,33 +3,21 @@
     flex-direction: column;
     box-sizing: border-box;
     align-items: center;
-    margin: 20;
-    background: #232323ab;
+    margin: 30px;
+    padding: 10px;
+    background: #232323;
     border-radius: 50px;
     box-shadow: 0px 0px 20px 10px orange;
-    padding: 10px;
-    height: 90vh;
-    overflow: scroll;
+    height: fit-content;
 }
 
-#about{
-    padding: 15px;
-}
 
-.light .aboutContainer{
-    background: #858585;
-}
-
-.light .aboutContainer{
-    box-shadow: 0px 0px 10px 8px skyblue;
-}
-
-.aboutContainer::-webkit-scrollbar{
-    display: none;
+.light .aboutContainer{   
+    background: #0000001c;
+    box-shadow: 0px 0px 20px 10px skyblue;
 }
 
 .aboutContainer h1{
-    font-size: 40px;
     margin-top: 10px;
     margin-bottom: 40px;
     padding: 10px;
@@ -40,7 +28,8 @@
 }
 
 .light .aboutContainer h1{
-    box-shadow: 0px 0px 10px 8px skyblue;
+    color: black;
+    box-shadow: 0px 0px 10px 10px skyblue;
 }
 
 #abtMe{
@@ -52,7 +41,7 @@
 }
 
 .profile{
-    width: 200px;
+    width: 150px;
     border-radius: 50%;
     box-shadow: 0px 0px 20px 5px orange;
     margin-bottom: 40px;
@@ -63,7 +52,7 @@
 }
 
 .aboutContainer h2{
-    font-size: 28px;
+    font-size: 20px;
     box-shadow: 3px 3px 5px 2px orange;
     padding: 5px;
     border-radius: 10px;

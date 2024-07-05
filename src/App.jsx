@@ -9,6 +9,7 @@ import './App.css'
 import { useEffect, useState } from 'react'
 
 function App() {
+  
   // fetching the theme from local storage 
   const currentTheme = localStorage.getItem('currentTheme');
 
@@ -35,7 +36,7 @@ function App() {
         <Navbar theme={theme} setTheme={setTheme} rootTheme={rootTheme}/>          
       </div>
       <div id='components' className={`container ${theme}`}>
-      <Home/>
+        <Home/>
       </div>
       <div id='components' className={`container ${theme}`}>
         <About/>

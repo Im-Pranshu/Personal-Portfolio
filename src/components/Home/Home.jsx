@@ -8,7 +8,7 @@ import profile from '../../assets/profile.png';
 const Home = () => {
   return (
     <div id='home' className='homeContainer'>
-        <div id='home' className='about'> 
+        <div className='about'> 
             <div className='homeProfile'>
                 <img src={profile} alt="" />
             </div>

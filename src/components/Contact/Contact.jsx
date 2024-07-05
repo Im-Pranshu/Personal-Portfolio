@@ -44,7 +44,7 @@ const Contact = () => {
   };
 
   return (
-    <div id='contact' className='contactMe'>
+    <div id='contact' className='contactMe componentStyle'>
       <div className='blurBg'></div>
       <div className='contDetail'>
         <h1>Contact <span id='spanContactMe'>Me</span></h1>
@@ -64,7 +64,10 @@ const Contact = () => {
               <textarea type="text" id="message" name="Message" rows="5" placeholder='Message' autoComplete='off' required></textarea>
             </div>
 
-            <input id='submit' type="submit"/>
+            <div className='formBtn'>
+              <input id='submit' className='formBtnStyle' type="submit"/>
+              <input id='reset' className='formBtnStyle' type="reset"/>
+            </div>
           </form>
         </div>
       </div>

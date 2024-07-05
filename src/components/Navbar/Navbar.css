@@ -70,7 +70,6 @@ nav li:hover{
 
 /* **************Light Mode************** */
 .toggleLight{
-  /* filter: invert(100%); */
   border-radius: 50%;
   background-color: white;
 }
@@ -126,7 +125,7 @@ button.contactBtn:hover{
 }
 
 .light nav{
-  background: #7a7a7af4;
+  background: #0000001c;
   border-radius: 30px;
   box-shadow: 0px 0px 10px 8px skyblue;
 }

@@ -4,7 +4,7 @@ import './Education.css'
 
 const Education = () => {
   return (
-    <div id='education' className='education'>
+    <div id='education' className='education componentStyle'>
         <h1>My <span id='journey'>Journey</span></h1>
         <div className='eduTable'>
             <div className='eT1'>

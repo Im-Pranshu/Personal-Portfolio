@@ -13,7 +13,6 @@ const Navbar = ({theme,setTheme,rootTheme}) => {
 
   return (
     <div className='navbar'>
-
       <nav>
         <img src={(theme == 'light') ? logo_light : logo_dark} alt="portfolio logo" className='logo'/>
     

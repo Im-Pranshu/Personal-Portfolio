@@ -3,7 +3,7 @@ import './Skills.css'
 
 const Skills = () => {
   return (
-    <div id='skills' className='skills'>
+    <div id='skills' className='skills componentStyle'>
         <h1>My <span id='mySkills'>Skills</span></h1>
         <div className='eduTable'>
             <div>
