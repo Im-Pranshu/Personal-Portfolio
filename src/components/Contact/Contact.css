@@ -29,7 +29,7 @@
 .blurBg{
     background-image: url('../../assets/contact_bg.jpg');
     /* Add the blur effect */
-    filter: blur(10px);
+    filter: blur(3px);
     border-radius: 50px;
     /* Full height and widht */
     height: 100%;

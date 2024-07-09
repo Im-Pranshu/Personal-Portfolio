@@ -2,6 +2,7 @@ import Navbar from './components/Navbar/Navbar'
 import Home from './components/Home/Home'
 import About from './components/About/About'
 import Education from './components/Education/Education'
+import Project from './components/Project/project'
 import Skills from './components/Skills/Skills'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
@@ -35,7 +36,7 @@ function App() {
       <div id='home' className={`container navBar ${theme}`}>
         <Navbar theme={theme} setTheme={setTheme} rootTheme={rootTheme}/>          
       </div>
-      <div id='components' className={`container ${theme}`}>
+      <div id='components' className={`home container ${theme}`}>
         <Home/>
       </div>
       <div id='components' className={`container ${theme}`}>
@@ -43,6 +44,9 @@ function App() {
       </div>
       <div id='components' className={`container ${theme}`}>
         <Education/>
+      </div>
+      <div id='components' className={`container ${theme}`}>
+        <Project/>
       </div>
       <div id='components' className={`container ${theme}`}>
         <Skills/>
