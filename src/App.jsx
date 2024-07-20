@@ -39,13 +39,13 @@ function App() {
       <div id='components' className={`home container ${theme}`}>
         <Home/>
       </div>
-      <div id='components' className={`container ${theme}`}>
+      <div id='components' className={`edu container ${theme}`}>
         <About/>
       </div>
-      <div id='components' className={`container ${theme}`}>
+      <div id='components' className={`edu container ${theme}`}>
         <Education/>
       </div>
-      <div id='components' className={`container ${theme}`}>
+      <div id='components' className={`edu container ${theme}`}>
         <Project/>
       </div>
       <div id='components' className={`container ${theme}`}>

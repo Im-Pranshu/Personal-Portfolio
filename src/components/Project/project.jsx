@@ -5,11 +5,12 @@ import profile from '../../assets/stars_bg.jpg';
 const project = () => {
   return (
     <div id="projects">
+        {/* <h1 className='secTitle'>My <span id='journey'>Journey</span></h1> */}
         <h2>Projects</h2>
         <div class="portfolio">
-            <div class="work-list">
-                <div class="work">
-                    <img src={profile} alt="project image" />
+            <div class="work-list card-list">
+                <div class="work card">
+                    <img src={profile} alt="project image"/>
                     <div className="hoverLayer">
                         <h3>TodoApp | HTML , CSS | React JS</h3>
                         <p>March 2024</p>
@@ -18,7 +19,7 @@ const project = () => {
                         <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work card">
                     <img src={profile} alt="project image" />
                     <div class="hoverLayer">
                         <h3>Tic-Tac-Toe Game | HTML , CSS | React JS </h3>
@@ -27,7 +28,7 @@ const project = () => {
                         <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work card">
                     <img src={profile} alt="project image" />
                     <div class="hoverLayer">
                         <h3>Personal Portfolio | HTML | CSS </h3>

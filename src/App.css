@@ -9,10 +9,10 @@
 }
 
 .container{
+  display: inline-block;
   width: 100%;
   padding: 30px 40px 20px 40px;
   height: 100vh;
-  /* background-color: black; */
   background-image: url('./assets/dark_background.png');
   transition: 0.5s;
   scroll-behavior: smooth;
@@ -100,7 +100,7 @@ button:hover {
   height: 100vh;
 }
 
-.componentStyle h1{
+.secTitle{
   font-size: 40px;
   margin: 10px 10px 40px 10px;
   padding: 10px;
@@ -110,7 +110,12 @@ button:hover {
   box-shadow: 3px 3px 5px 2px orange;
 }
 
-.light .componentStyle>h1{
+.light .secTitle{
   color: black;
   box-shadow: 3px 3px 8px 8px skyblue;
+}
+
+
+.edu{
+  display: inline;
 }
