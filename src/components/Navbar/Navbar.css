@@ -120,12 +120,8 @@ button.contactBtn:hover{
   outline: 2px auto -webkit-focus-ring-color;
 } 
 
-#navBtn > a:hover{
-  color: black;
-}
-
 .light nav{
-  background: #0000001c;
+  background: #cbcbcb84;
   border-radius: 30px;
   box-shadow: 0px 0px 10px 8px skyblue;
 }
@@ -140,9 +136,8 @@ button.contactBtn:hover{
 }
 
 .light #navBtn{
-  background: rgba(255, 255, 255, 0.76);
   color: black;
-  box-shadow: 0px 0px 10px 1px black;
+  box-shadow: 0px 0px 3px 1px black;
   transition: ease-in-out 0.3s;
 }
 

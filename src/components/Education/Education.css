@@ -8,9 +8,13 @@
     color: orange;
 }
 
-.education > h1{
+/* .education > h1{
     display: flex;
     justify-content: center;
+} */
+
+.education h2{
+    color: orange;
 }
 
 .light #journey{

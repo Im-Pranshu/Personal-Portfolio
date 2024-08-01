@@ -5,7 +5,7 @@ import profile from '../../assets/stars_bg.jpg';
 const project = () => {
   return (
     <div id="projects">
-        {/* <h1 className='secTitle'>My <span id='journey'>Journey</span></h1> */}
+        <h1 className='secTitle'>My <span id='journey'>Projects</span></h1> 
         <h2>Projects</h2>
         <div class="portfolio">
             <div class="work-list card-list">

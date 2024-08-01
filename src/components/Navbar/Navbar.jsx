@@ -33,7 +33,7 @@ const Navbar = ({theme,setTheme,rootTheme}) => {
 
 
 
-        <a href="#contact"><button id='navBtn' className='contactBtn'>Contact</button></a>
+        <a href="#contact" ><button id='navBtn' className='contactBtn'>Contact</button></a>
       </nav>
 
     </div>  
