@@ -33,14 +33,6 @@
     box-shadow: 3px 3px 8px 8px skyblue;
 }
 
-#abtMe{
-    color: orange;
-}
-
-.light #abtMe{
-    color: skyblue;
-}
-
 .profile{
     width: 150px;
     border-radius: 50%;

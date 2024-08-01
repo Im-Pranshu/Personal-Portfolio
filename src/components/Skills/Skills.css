@@ -1,19 +1,13 @@
-#mySkills{
-    color: orange;
-}
-
-.light #mySkills{
-    color: skyblue;
-}
-
 .skList{
     display: flex;
     gap: 30px;
-    overflow: scroll;
 }
 
-.skList::-webkit-scrollbar{
-    display: none;
+.skillType{
+    color: rgb(253, 243, 224);
+}
+.light .skillType{
+    color: rgb(0, 46, 63);
 }
 
 /* complete skill block design */
@@ -28,6 +22,7 @@
     margin: 20px 0px 20px 20px;
     box-shadow: 0px 0px 10px 1px orange;
     transition: 0.8s;
+    backdrop-filter: blur(3px);
 }
 
 /* complete skill block design in light mode*/
@@ -48,6 +43,7 @@
 
 /* complete skill block design on light mode hover */
 .light .skBlock:hover{
+    border: 2px solid rgba(0, 0, 0, 0.276);
     filter: drop-shadow(0px 0px 10px skyblue);
 }
 
@@ -162,6 +158,20 @@
 
 .skContent p{
     float: right;
+    color: wheat;
+}
+
+.light .skContent > p{
+    color: rgb(10, 90, 121);
+}
+
+.skContent > h3{
+    color: rgb(255, 242, 217);
+    margin-bottom: 8px;
+}
+
+.light .skContent > h3{
+    color: rgb(0, 46, 63);
 }
 
 /* making responsive */

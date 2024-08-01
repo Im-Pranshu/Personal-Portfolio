@@ -33,26 +33,28 @@ function App() {
   
   return (
     <div className='mainContainer'>
-      <div id='home' className={`container navBar ${theme}`}>
+      <div className={`container navBar ${theme}`}>
         <Navbar theme={theme} setTheme={setTheme} rootTheme={rootTheme}/>          
       </div>
-      <div id='components' className={`home container ${theme}`}>
+      <div className={`home container ${theme}`}>
         <Home/>
       </div>
-      <div id='components' className={`edu container ${theme}`}>
-        <About/>
-      </div>
-      <div id='components' className={`edu container ${theme}`}>
-        <Education/>
-      </div>
-      <div id='components' className={`edu container ${theme}`}>
-        <Project/>
-      </div>
-      <div id='components' className={`container ${theme}`}>
-        <Skills/>
-      </div>
-      <div id='components' className={`container ${theme}`}>
-        <Contact/>
+      <div className={` container ${theme}`}>
+        <div className="components">
+          <About/>
+        </div>
+        <div className="components">
+          <Education/>
+        </div>
+        <div className="components">
+          <Project/>
+        </div>
+        <div className="components">
+          <Skills/>
+        </div>
+        <div className="components">
+          <Contact/>
+        </div>
       </div>
       <div id='footer' className={`container ${theme}`}>
         <Footer/>

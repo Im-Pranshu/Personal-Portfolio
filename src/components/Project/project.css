@@ -120,6 +120,7 @@
     transition: 0.5s;
     color: black;
     background: orange;
+    transform: scale(1.2);
 }
 
 .light .btn:hover{

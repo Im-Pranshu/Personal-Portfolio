@@ -14,14 +14,6 @@
     box-shadow: 3px 3px 5px 2px skyblue;
 }
 
-#spanContactMe{
-    color: orange ;
-}
-
-.light #spanContactMe{
-    color: skyblue ;
-}
-
 .blurBg{
     background-image: url('../../assets/contact_bg.jpg');
     /* Add the blur effect */
@@ -45,7 +37,7 @@
   padding: 10px;
 }
 
-.light .contDetail h3{
+.contDetail h3{
     color: white;
 }
 
@@ -97,11 +89,12 @@
     border: 2px solid orange;
     display: flex;
     background: none;
+    color: white;
     padding: 12px;
     border: 2px solid orange;
     border-radius: 10px;
     margin: 20px auto 20px auto;
-    transition: 0.8s;
+    transition: 0.6s;
 }
 
 .light .formBtnStyle{
@@ -109,10 +102,10 @@
 }
 
 .formBtnStyle:hover{
-    transition: 0.8s;
+    transition: 0.6s;
     color: black;
     background-color: orange;
-    border: 2px solid white;
+    transform: scale(1.2);
 }
 
 .light .formBtnStyle:hover{
