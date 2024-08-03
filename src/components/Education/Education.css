@@ -6,6 +6,7 @@
 
 .eduListItem{
     height: 250px;
+    backdrop-filter: blur(2px);
 }
 
 .aboutEdu{

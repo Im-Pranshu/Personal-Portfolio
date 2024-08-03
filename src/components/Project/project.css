@@ -16,6 +16,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     grid-gap: 50px;
+    align-items: center;
     margin-top: 50px;
 }
 
@@ -127,4 +128,17 @@
     transition: 0.6s;
     color: black;
     background: skyblue;
+}
+
+@media (max-width:480px) {
+    .card-list{
+        margin: 0px;
+        grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+    }
+    .card{
+        height: 250px;
+    }
+    .aboutEdu > h3{
+        font-size: 1.5rem;
+    }
 }

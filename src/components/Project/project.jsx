@@ -15,6 +15,16 @@ const project = () => {
         <div class="portfolio">
             <div class="work-list card-list">
                 <div class="work card">
+                    <img src={portfolio} alt="project image" />
+                    <div class="hoverLayer">
+                        <h3>Personal Portfolio | HTML | CSS </h3>
+                        <p>April 2024</p>
+                        <p>Implementes Basic Javascript to add button click responses.</p>
+                        <p>Fully Responsive in small screen and large screens both.</p>
+                        <a href="https://react-portfolio-im-pranshus-projects.vercel.app/">View</a>
+                    </div>
+                </div>
+                <div class="work card">
                     <img src={todoApp} alt="project image"/>
                     <div className="hoverLayer">
                         <h3>TodoApp | HTML , CSS | React JS</h3>
@@ -31,16 +41,6 @@ const project = () => {
                         <p>February 2024</p>
                         <p>Undo Redo Features using REACT HOOKS</p>
                         <a href="https://github.com/Im-Pranshu/Tic-Tac-Toe">View</a>
-                    </div>
-                </div>
-                <div class="work card">
-                    <img src={portfolio} alt="project image" />
-                    <div class="hoverLayer">
-                        <h3>Personal Portfolio | HTML | CSS </h3>
-                        <p>September 2023</p>
-                        <p>Implementes Basic Javascript to add button click responses.</p>
-                        <p>Fully Responsive in small screen and large screens both.</p>
-                        <a href="https://react-portfolio-im-pranshus-projects.vercel.app/">View</a>
                     </div>
                 </div>
             </div>
