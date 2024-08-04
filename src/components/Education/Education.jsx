@@ -4,7 +4,6 @@ import './Education.css'
 const Education = () => {
   return (
     <div id='education'>
-
         {/* added this this div align h1 on center without affecting grid of content. */}
         <div className="componentStyle">
             <h1 className='secTitle'>My <span id='spanTitle'>Education</span></h1>

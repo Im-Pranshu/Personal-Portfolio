@@ -48,11 +48,7 @@ const project = () => {
         </div>
 
         <div className='eT2'>
-            
-                
-                
-                
-            </div>
+        </div>
     </div>
   )
 }
