@@ -322,6 +322,7 @@ a#connect:hover{
 @media (max-width:500px){
     .homeContainer{
         height: 70vh;
+    }
     .about{
         flex-direction: row;
         align-items: center;
