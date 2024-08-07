@@ -128,7 +128,7 @@
     background-color: rgba(0, 0, 0, 0.5);
   }
   
-  .modal-content {
+.modal-content {
     background-color: black;
     border-radius: 30px;
     box-shadow: 0px 0px 6px orange;
@@ -137,38 +137,49 @@
     padding: 20px;
     border: 1px solid orange;
     width: 80%;
-  }
+}
 
-  .light .modal-content{
+.light .modal-content{
     background: #0000001c;
     border: 1px solid skyblue;
     box-shadow: 0px 0px 6px skyblue;
     filter: drop-shadow(0px 0px 5px skyblue);
     color: white;
-  }
+}
 
-  #modalMessage{
+#modalMessage{
     color: white;
-  }
-  
-  .close {
+}
+
+.close {
     color: white;
     float: right;
     filter: drop-shadow(0px 0px 5px orange);
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
-  }
-  
-  .close:hover,
-  .close:focus {
+}
+
+.close:hover,
+.close:focus {
     color: orange;
     filter: drop-shadow(0px 0px 5px white);
     text-decoration: none;
     cursor: pointer;
-  }
+}
+  
+/* responsive css style  */
+@media (max-width: 920px) {
+    .fname > input{
+        width: 29vw;
+    }
 
-  @media (max-width:480px){
+    .details > input{
+        width: 60vw;
+    }
+}
+  
+@media (max-width: 798px) {
     .fname{
         display: flex;
         flex-direction: column;
@@ -176,20 +187,25 @@
         align-items: center;
     }
     .fname > input{
-        width: 220px;
+        width: 60vw;
     }
 
     .details > input{
-        width: 220px;
+        width: 60vw;
+    }
+}
+  
+@media (max-width: 520px) {
+    .fname > input{
+        width: 60vw;
+    }
+
+    .details > input{
+        width: 60vw;
     }
 
     .formBtn > input{
         padding: 6px;
         margin: 15px;
     }
-    #contact{
-        margin-left: 0px;
-        width: 100%;
-        padding: 0px;
-    }
-  }
+}

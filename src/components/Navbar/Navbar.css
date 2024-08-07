@@ -334,6 +334,10 @@
     align-items: center;
   }
 
+  #navBtn{
+    margin-left: 500px;
+  }
+
   .navButtons .hamburgerMenu {
     display: block;
     font-size: 2.5rem;
@@ -351,9 +355,9 @@
     height: 3.75rem;
   }
 
-  /* .logo h2 {
-    font-size: 2rem;
-  } */
+  .logo img{
+    width: 150px;
+  }
 
   .mobileMenuLinks {
     transition: 0.5s;
@@ -365,6 +369,10 @@
     display: flex;
     justify-self: end;
     align-items: center;
+  }
+
+  #navBtn{
+    margin-left: 200px;
   }
 
   .navButtons .hamburgerMenu {

@@ -31,6 +31,7 @@
   
 .light .aboutContainer>h1{
     box-shadow: 3px 3px 8px 8px skyblue;
+    color: black;
 }
 
 .profile{
@@ -86,6 +87,10 @@
     color: white;
 }
 
+.light .aboutContainer>p{
+    color: rgb(0, 0, 53);
+}
+
 #knowMore{
     padding: 8px;
     margin-top: 10px;
@@ -114,7 +119,7 @@
     box-shadow: 2px 2px 3px 1px skyblue ;
 }
 
-@media (max-width:700px){
+@media (max-width:798px){
     .aboutContainer > h1{
         font-size: 28px;
     }
@@ -126,5 +131,35 @@
     }
     .aboutContainer h2{
         font-size: 16px;
+    }
+}
+
+@media (max-width: 520px) {
+    .aboutContainer{   
+        box-shadow: 0px 0px 15px 1px orange;
+        border-radius: 10px;
+    }
+    .light .aboutContainer{   
+        box-shadow: 0px 0px 15px 1px skyblue;
+    }
+
+    .aboutContainer h1{
+        font-size: 0.9rem;
+    }
+
+    .aboutContainer img{
+        width: 100px;
+    }
+    
+    .aboutContainer h2{
+        font-size: 0.7rem;
+    }
+
+    .aboutContainer p{
+        font-size: 0.5rem;
+    }
+
+    .aboutContainer a{
+        font-size: 0.5rem;
     }
 }

@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     margin-top: 20px;
     padding: 15px;
-    height: 80vh;
+    height: 50vh;
 }
 
 .homeContainer h1{
@@ -189,63 +189,11 @@ a#connect:hover{
     box-shadow: 0px 0px 10px 2px skyblue;
 }
 
-@media ((max-width:900px)){
+@media (max-width:1200px){
+
     .about{
-        flex-direction: column;
-        gap: 20px;
-        justify-content: center;
-        text-align: center;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-    
-    .about img{
-        width: 160px;
-    }
-
-    .homeAbout{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
-        padding: 0px;
-    }
-
-    .homeAbout h1{
-        font-size: 1.5rem;
-    }
-
-    .homeAbout h2{
-        
-        font-size: 0.7rem;
-        margin-bottom: 10px;
-    }
-
-    .homeAbout p{
-        margin-top: 5px;
-        font-size: 0.6rem;
-        margin-bottom: 20px;
-    }
-
-    .aboutBtn{
-        justify-content: center;
-        margin-left: 25px;
-        gap: 40px;
-    }
-
-    .aboutBtn a, a#explore {
-        font-size: 16px;
-        padding: 15px;
-        height: 50px;
-        width: 130px;
-    }
-}
-
-@media ((min-width:1000px) and  (max-width:1200px)){
-    .about{
-        margin-top: 50px;
-        margin-left: auto;
-        margin-right: auto;
+        height: 70%;
+        align-content: center;
     }
     
     .about img{
@@ -274,24 +222,26 @@ a#connect:hover{
     }
 }
 
-@media (max-width:980px){
+@media (max-width:1000px){
+    .homeContainer{
+        height: 70vh;
+    }
     .about{
         display: flex;
-        flex-wrap: wrap;
-        gap: 50px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
         margin-top: 50px;
-        margin-right: auto;
-        margin-left: auto;
-        margin-top: auto;
-        margin-bottom: auto;
     }
     
     .about img{
-        width: 250px;
+        width: 300px;
     }
 
     .homeAbout{
-        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding: 0px;
     }
 
@@ -315,13 +265,70 @@ a#connect:hover{
     }
 }
 
-@media (max-width:480px){
+@media ((max-width:800px)){
+    .homeContainer{
+        height: 55vh;
+    }
     .about{
+        gap: 20px;
+        justify-content: center;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .about img{
+        width: 250px;
+    }
+
+    .homeAbout{
         display: flex;
+        flex-direction: column;
         align-items: center;
+        margin-top: 10px;
+        padding: 0px;
+    }
+
+    .homeAbout h1{
+        font-size: 1.5rem;
+    }
+
+    .homeAbout h2{
+        
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+    }
+
+    .homeAbout p{
+        margin-top: 5px;
+        margin-bottom: 20px;
+    }
+
+    .aboutBtn{
+        justify-content: center;
+        margin-left: 25px;
+        gap: 40px;
+    }
+
+    .aboutBtn a, a#explore {
+        font-size: 18px;
+        padding: 5px;
+        height: 70px;
+        width: 130px;
+    }
+}
+
+
+
+@media (max-width:500px){
+    .homeContainer{
+        height: 70vh;
+    .about{
+        flex-direction: row;
+        align-items: center;
+        margin-top: 40px;
     }
     .about img{
-        width: 200px;
+        width: 150px;
         margin: 0px;
     }
     .homeAbout{
@@ -338,7 +345,4 @@ a#connect:hover{
         background: none;
 
     }
-    .aboutHomeBtn{
-    }
-
 }

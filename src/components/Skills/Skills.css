@@ -174,37 +174,69 @@
     color: rgb(0, 46, 63);
 }
 
-/* making responsive */
-@media (min-width:850px) and (max-width: 1100px){   
+/* responsive css style  */
+@media (max-width: 1080px) {
     .skBlock{
         margin: 15px 0px 15px 15px;
         padding: 15px;
     }
     .skBlockAbout{
-        width: 300px;
+        width: 30vw;
     }
-}
-
-@media (min-width:550px) and (max-width:850px) {
+  }
+  
+  
+  @media (max-width: 730px) {
     .skList{
         display: inline-block;
     }
     .skBlockAbout{
-        width: 250px;
+        width: 50vw;
     }
-}
-
-@media (max-width:549px){
-    .skList{
-        display: inline-block;
-    }
+  
+  }
+  
+  @media (max-width: 520px) {
+    
     .skList h2{
         font-size: 1.2em;
     }
     .skBlock h3{
         font-size: 1em;
     }
-    .skBlockAbout{
-        width: 200px;
+
+    /* filling layer bar upto desired percentage for Technical Skills */
+    .one{
+        width: 70%;
     }
+
+    .two{
+        width: 60%;
+    }
+
+    .three{
+        width: 40%;
+    }
+
+    .four{
+        width: 75%;
+    }
+
+    /* filling layer bar upto desired percentage for Professional Skills */
+    .a{
+        width: 70%;
+    }
+
+    .b{
+        width: 70%;
+    }
+
+    .c{
+        width: 60%;
+    }  
+
+    .d{
+        width: 85%;
+}
+    
 }
