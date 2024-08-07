@@ -3,7 +3,7 @@
     flex-wrap: wrap;
     margin-top: 20px;
     padding: 15px;
-    height: 50vh;
+    height: 80vh;
 }
 
 .homeContainer h1{
@@ -223,54 +223,9 @@ a#connect:hover{
 }
 
 @media (max-width:1000px){
-    .homeContainer{
-        height: 70vh;
-    }
-    .about{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        margin-top: 50px;
-    }
-    
-    .about img{
-        width: 300px;
-    }
-
-    .homeAbout{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0px;
-    }
-
-    .homeAbout h1{
-        font-size: 1.7rem;
-    }
-
-    .homeAbout h2{
-        font-size: 0.9rem;
-        margin-bottom: 15px;
-    }
-
-    .homeAbout p{
-        margin-top: 5px;
-        font-size: 0.7rem;
-        margin-bottom: 20px;
-    }
-
-    .aboutBtn a, a#explore {
-        padding: 10px;
-    }
-}
-
-@media ((max-width:800px)){
-    .homeContainer{
-        height: 55vh;
-    }
     .about{
         gap: 20px;
+        align-items: center;
         justify-content: center;
         text-align: center;
         margin-top: 20px;
@@ -317,19 +272,16 @@ a#connect:hover{
     }
 }
 
-
+/* last */
 
 @media (max-width:500px){
-    .homeContainer{
-        height: 70vh;
-    }
     .about{
         flex-direction: row;
         align-items: center;
-        margin-top: 40px;
+        margin-top: 50px;
     }
     .about img{
-        width: 150px;
+        width: 140px;
         margin: 0px;
     }
     .homeAbout{
@@ -339,11 +291,22 @@ a#connect:hover{
     .homeAbout h1{
         font-size: 1.2rem;
     }
+
+    .homeAbout p{
+        font-size: 0.6rem;
+    }
+
     .aboutBtn{
         display: flex;
         flex-direction: column;
         gap: 20px;
         background: none;
+    }
 
+    .aboutBtn > a, a#explore{
+        font-size: 14px;
+        padding: 5px;
+        height: 50px;
+        width: 100px;
     }
 }
