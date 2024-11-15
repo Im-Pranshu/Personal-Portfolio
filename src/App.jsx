@@ -10,55 +10,55 @@ import './App.css'
 import { useEffect, useState } from 'react'
 
 function App() {
-  
+
   // fetching the theme from local storage
   const currentTheme = localStorage.getItem('currentTheme');
 
-// **********changing bg color of the root element**********
+  // **********changing bg color of the root element**********
   const rootTheme = document.querySelector('#root');
   // if stored theme is dark then display black root.
-  if(currentTheme == 'dark'){
+  if (currentTheme == 'dark') {
     rootTheme.style.backgroundColor = "black";
   }
-  
-// **********Responsible for theme of entire app**********
+
+  // **********Responsible for theme of entire app**********
   const [theme, setTheme] = useState(currentTheme ? currentTheme : 'dark');
-  
+
   // if after toggling theme is dark then make root black else make root white.
   theme == 'light' ? rootTheme.style.backgroundColor = "white" : rootTheme.style.backgroundColor = "black";
 
   // storing value in local storage
-  useEffect(()=>{
-    localStorage.setItem('currentTheme',theme);
-  },[theme]);
-  
+  useEffect(() => {
+    localStorage.setItem('currentTheme', theme);
+  }, [theme]);
+
   return (
     <>
       <div className={`nav ${theme}`}>
-        <Navbar theme={theme} setTheme={setTheme}/>          
+        <Navbar theme={theme} setTheme={setTheme} />
       </div>
       <div className={`home container ${theme}`}>
-        <Home/>
+        <Home theme={theme} />
       </div>
       <div className={`container ${theme}`}>
         <div className="components">
-          <About/>
+          <About />
         </div>
         <div className="components">
-          <Education/>
+          <Education />
         </div>
         <div className="components">
-          <Project/>
+          <Project />
         </div>
         <div className="components">
-          <Skills/>
+          <Skills />
         </div>
         <div className="components">
-          <Contact/>
+          <Contact />
         </div>
       </div>
       <div className={`container ${theme}`}>
-        <Footer/>
+        <Footer />
       </div>
     </>
   )
