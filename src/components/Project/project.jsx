@@ -12,11 +12,11 @@ const project = () => {
                 <h1 className='secTitle'>My <span id='spanTitle'>Projects</span></h1>
             </div>
 
-            <div class="portfolio">
-                <div class="work-list card-list">
-                    <div class="work card">
+            <div className="portfolio">
+                <div className="work-list card-list">
+                    <div className="work card">
                         <img src={anonymous} alt="project image" />
-                        <div class="hoverLayer">
+                        <div className="hoverLayer">
                             <h3>Anonymous | React.js | Firebase </h3>
                             <p>October 2024</p>
                             <p>Start posting anonymously where no one will judge.</p>
@@ -24,7 +24,7 @@ const project = () => {
                             <a href="https://anonymous-post-publish.vercel.app/" target='_blank'>View</a>
                         </div>
                     </div>
-                    <div class="work card">
+                    <div className="work card">
                         <img src={clearQ} alt="project image" />
                         <div className="hoverLayer">
                             <h3>ClearQ | MERN Stack </h3>
@@ -35,9 +35,9 @@ const project = () => {
                             <a href="https://clear-q.vercel.app/" target='_blank'>View</a>
                         </div>
                     </div>
-                    <div class="work card">
+                    <div className="work card">
                         <img src={ticTacToe} alt="project image" />
-                        <div class="hoverLayer">
+                        <div className="hoverLayer">
                             <h3>Tic-Tac-Toe Game | React.js </h3>
                             <p>February 2024</p>
                             <p>Undo Redo Features using REACT HOOKS</p>
@@ -45,7 +45,7 @@ const project = () => {
                         </div>
                     </div>
                 </div>
-                <a href="https://github.com/Im-Pranshu?tab=repositories" target='_blank' class="btn">See More</a>
+                <a href="https://github.com/Im-Pranshu?tab=repositories" target='_blank' className="btn">See More</a>
             </div>
 
             <div className='eT2'>

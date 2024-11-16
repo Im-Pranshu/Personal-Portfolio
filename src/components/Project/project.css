@@ -110,6 +110,7 @@
     text-decoration: none;
     color: #fff;
     transition: 0.5s;
+    backdrop-filter: blur(2px);
 }
 
 .light .btn{
@@ -130,14 +131,16 @@
     background: skyblue;
 }
 
-@media (max-width:480px) {
+@media (max-width:500px) {
     .card-list{
         margin: 0px;
         grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
     }
     .card{
-        height: 250px;
+        height: 320px;
+        /* width:280px; */
     }
+
     .aboutEdu > h3{
         font-size: 1.5rem;
     }

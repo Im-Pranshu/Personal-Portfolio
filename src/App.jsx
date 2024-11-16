@@ -42,7 +42,7 @@ function App() {
       </div>
       <div className={`container ${theme}`}>
         <div className="components">
-          <About />
+          <About theme={theme} />
         </div>
         <div className="components">
           <Education />
