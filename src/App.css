@@ -4,10 +4,6 @@
   background-color: black;
 }
 
-.nav{
-
-}
-
 /* Container Class is for all the react components */
 .container{
   display: inline-block;
@@ -16,6 +12,9 @@
   height: 100%;
   position: relative;
   background-image: url('./assets/dark_background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   transition: 0.5s;
   scroll-behavior: smooth;
 }
@@ -23,18 +22,25 @@
 .container.light{
   background: white;
   background-image: url('./assets/light_background.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 /* Proving backrgound look for dark theme in Home */
 .home{
-  position: relative;
-  background-image: url('./assets/stars_bg.jpg');
-  background-size: contain;
+  background-image: url('./assets/contact_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
 }
 /* Proving backrgound look for light theme in Home */
 .home.light{ 
-  background-image: url('./assets/light_background.png');
-  background-size: contain;
+  background-image: url('./assets/light_sea.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 /* this class is used to arrange indentation between components mentioned in App.jsx */

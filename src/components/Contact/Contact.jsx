@@ -44,7 +44,7 @@ const Contact = () => {
   };
 
   return (
-    <div id='contact' className='contactMe componentStyle'>
+    <div id='contact' className='componentStyle'>
       <div className='blurBg'></div>
       <div className='contDetail'>
         <h1 className='secTitle'>Contact <span id='spanTitle'>Me</span></h1>
@@ -54,19 +54,19 @@ const Contact = () => {
           <form id='cForm' className='cForm' onSubmit={handleSubmit}>
 
             <div className='fname'>
-              <input type="text" placeholder='First Name' name='FirstName' autoComplete='off' required/>
-              <input type="text" placeholder='Last Name' name='LastName' autoComplete='off' required/>
+              <input type="text" placeholder='First Name' name='FirstName' autoComplete='off' required />
+              <input type="text" placeholder='Last Name' name='LastName' autoComplete='off' required />
             </div>
 
             <div className='details'>
-              <input type="email" placeholder='Email ID' name='Email' autoComplete='off' required/>
+              <input type="email" placeholder='Email ID' name='Email' autoComplete='off' required />
               <input type="number" placeholder='Phone Number' name='PhoneNo' autoComplete='off' required />
               <textarea type="text" id="message" name="Message" rows="5" placeholder='Message' autoComplete='off' required></textarea>
             </div>
 
             <div className='formBtn'>
-              <input id='submit' className='formBtnStyle' type="submit"/>
-              <input id='reset' className='formBtnStyle' type="reset"/>
+              <input id='submit' className='formBtnStyle' type="submit" />
+              <input id='reset' className='formBtnStyle' type="reset" />
             </div>
           </form>
         </div>

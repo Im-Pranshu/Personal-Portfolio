@@ -6,54 +6,84 @@
 
 .eduListItem{
     height: 250px;
-    backdrop-filter: blur(2px);
 }
 
+.bgCard{
+    filter: blur(2px);
+    position: absolute;
+    background-size: contain;
+    opacity: .9;
+    /* Full height and widht */
+    height: 600px;
+    width: 100%;
+}
+
+.highSchool{
+    background-image: url('../../assets/high_school.jpg');
+}
+
+.intermediate{
+    background-image: url('../../assets/intermediate_school.jpg');
+}
+
+.college{
+    background-image: url('../../assets/college.jpg');
+}
+
+
 .aboutEdu{
+    position: relative;
     display: flex;
     flex-direction: column;
     padding: 20px 20px;
-    color: white;
 }
 
 .aboutEdu > h3{
     display: flex;
     justify-content: center;
-    color: rgb(255, 189, 65);
+    color: rgb(240, 159, 8);
+    text-shadow: 1px 1px rgb(94, 67, 18);
     font-size: 2.5em;
     margin-top: 15px;
     margin-bottom: 20px;
 }
 
 .light .aboutEdu > h3{
-    color: rgb(56, 93, 108);
+    color: rgb(63, 175, 219);
+    text-shadow: 1px 1px rgb(56, 93, 108);
 }
 
 .aboutEdu > h4{
     display: flex;
     justify-content: center;
-    color: rgb(255, 228, 177);
+    color: rgb(253, 237, 201);
+    text-shadow: 1px 1px 3px rgb(32, 23, 8);
     font-size: 1.3em;
     margin-bottom: 30px;
 }
 
 .light .aboutEdu > h4{
-    color: rgb(99, 166, 193);
+    color: rgb(215, 244, 255);
+    text-shadow: 1px 1px 3px rgb(6, 34, 45);
 }
 
 .aboutEdu > p{
     display: flex;
     justify-content: center;
     color: rgb(255, 242, 218);
+    text-shadow: 1px 1px 3px rgb(32, 23, 8);
     margin-bottom: 10px;
 }
 
 .light .aboutEdu > p{
-    color: rgb(119, 170, 190);
+    text-shadow: 1px 1px 3px rgb(50, 70, 78);
 }
 
 .hoverLayer p{
     margin-top: 15px;
 }
+
+
+
 
 /* code for the css functionality of the page is written in project.css as both are reflecting same designs. */

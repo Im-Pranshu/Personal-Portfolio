@@ -1,5 +1,8 @@
 import React from 'react'
 import './Education.css'
+import highSchool from "../../assets/high_school.jpg"
+import intermediateSchool from "../../assets/intermediate_school.jpg"
+import college from "../../assets/college.jpg"
 
 const Education = () => {
     return (
@@ -11,7 +14,8 @@ const Education = () => {
 
             <div className='eduList card-list'>
                 <div className='eduListItem card'>
-                    {/* <img src={profile} alt="project image"/> */}
+
+                    <div className="highSchool bgCard"></div>
                     <div className='aboutEdu'>
                         <h3>High School</h3>
                         <h4>Krishna Education Centre</h4>
@@ -24,7 +28,8 @@ const Education = () => {
                 </div>
 
                 <div className='eduListItem card'>
-                    {/* <img src={profile} alt="project image"/> */}
+                    {/* <img src={intermediateSchool} alt="project image" /> */}
+                    <div className="intermediate bgCard"></div>
                     <div className='aboutEdu'>
                         <h3>Intermediate </h3>
                         <h4>Krishna Education Centre</h4>
@@ -37,7 +42,8 @@ const Education = () => {
                 </div>
 
                 <div className='eduListItem card'>
-                    {/* <img src={profile} alt="project image"/> */}
+                    {/* <img src={college} alt="project image" /> */}
+                    <div className="college bgCard"></div>
                     <div className='aboutEdu'>
                         <h3>B.Tech CSE</h3>
                         <h4>Axis Colleges</h4>

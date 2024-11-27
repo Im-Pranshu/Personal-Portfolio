@@ -13,7 +13,7 @@
 }
 
 .light .homeAbout > h1{
-    color: rgb(0, 0, 63);
+    color: rgb(215, 213, 213);
 }
 
 #name{
@@ -65,11 +65,12 @@
 }
 
 .homeContainer p{
-    font-size: 0.9em;
+    font-size: 1em;
     font-family: cursive;
     max-width: 470px;
     margin-bottom: 40px;
     color: rgb(255, 235, 199);
+    text-shadow: 1px 0px  rgb(215, 213, 213);
 }
 
 .homeAbout{
@@ -80,7 +81,8 @@
 }
 
 .light .homeAbout > p{
-    color: rgb(0, 0, 100);
+    color: rgb(225, 247, 255);
+    text-shadow: 1px 0px rgb(225, 247, 255);
 }
 
 .about{
