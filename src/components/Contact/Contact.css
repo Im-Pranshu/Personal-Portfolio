@@ -15,10 +15,10 @@
 }
 
 .blurBg{
-    background-image: url('../../assets/contact_bg.jpg');
+    background-image: url('../../assets/stars_bg.jpg');
     /* Add the blur effect */
-    filter: blur(3px);
-    border-radius: 50px;
+    filter: blur(10px);
+    border-radius: 20px;
     /* Full height and widht */
     height: 600px;
     width: 100%;
@@ -81,7 +81,6 @@
 .details textarea{
     max-width: 720px;
     max-height: 120px;
-
 }
 
 .formBtnStyle{
@@ -180,10 +179,13 @@
 }
   
 @media (max-width: 798px) {
+    
+    .cForm input, .cForm textarea {
+        margin: 8px;
+    }
     .fname{
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
     }
     .fname > input{
@@ -195,13 +197,30 @@
     }
 }
   
-@media (max-width: 520px) {
+@media (max-width: 400px) {
+    #contact h1{
+        font-size: 1.2rem;
+    }
+
+    #contact h3{
+        font-size: 0.7rem;
+    }
+    
     .fname > input{
-        width: 60vw;
+        width: 40vw;
+    }
+
+    .details{
+        align-items: center;
     }
 
     .details > input{
-        width: 60vw;
+        width: 40vw;
+    }
+
+    .details textarea{
+        max-width: 40vw;
+        
     }
 
     .formBtn > input{

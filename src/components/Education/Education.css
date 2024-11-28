@@ -5,14 +5,13 @@
 }
 
 .eduListItem{
-    height: 250px;
+    height: 220px;
 }
 
 .bgCard{
-    filter: blur(2px);
+    filter: blur(3px);
     position: absolute;
     background-size: contain;
-    opacity: .9;
     /* Full height and widht */
     height: 600px;
     width: 100%;
