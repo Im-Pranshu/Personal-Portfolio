@@ -21,7 +21,7 @@ const project = () => {
                             <p>October 2024</p>
                             <p>Start posting anonymously where no one will judge.</p>
                             <p>A Firebase App with full CRUD Operations.</p>
-                            <a href="https://anonymous-post-publish.vercel.app/" target='_blank'>View</a>
+                            <a href="https://anonymous-post-publish.vercel.app" target='_blank'>View</a>
                         </div>
                     </div>
                     <div className="work card">
@@ -32,7 +32,7 @@ const project = () => {
                             <p>Manage Your Daily Tasks.</p>
                             <p><b>Features : </b> Full CRUD Operations.</p>
                             <p>A MERN STACK APP.</p>
-                            <a href="https://clear-q.vercel.app/" target='_blank'>View</a>
+                            <a href="https://clearq-frontend.onrender.com" target='_blank'>View</a>
                         </div>
                     </div>
                     <div className="work card">
