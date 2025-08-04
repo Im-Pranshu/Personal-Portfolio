@@ -4,7 +4,7 @@ import { MdDarkMode, MdLightMode } from "react-icons/md";
 import logo_dark from '../../assets/logo_white.png';
 import logo_light from '../../assets/logo_black.png';
 import { GiHamburgerMenu } from "react-icons/gi";
-
+import { motion } from 'framer-motion';
 
 const Navbar = ({ theme, setTheme }) => {
 
@@ -21,7 +21,12 @@ const Navbar = ({ theme, setTheme }) => {
 
   return (
     <>
-      <nav className='navBar'>
+      <motion.nav
+        className='navBar'
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+      >
         <div className='logo'>
           <a href="/">
             <img
@@ -43,12 +48,16 @@ const Navbar = ({ theme, setTheme }) => {
         <div className='navButtons'>
           <ul className='navBtnDesktop'>
             <li>
-              <button
+              <motion.button
                 id='navBtn'
                 className={(theme == 'light') ? 'lightModeBtn' : 'darkModeBtn'}
-                onClick={() => { toggle_theme() }} >
+                onClick={() => { toggle_theme() }}
+                whileHover={{ scale: 1.1, rotate: 15 }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ duration: 0.2 }}
+              >
                 {toggleThemeIcon}
-              </button>
+              </motion.button>
             </li>
             <li>
               <div className="mobileContactBtn">
@@ -61,17 +70,19 @@ const Navbar = ({ theme, setTheme }) => {
 
           {/* Hamburger Menu */}
           <div className="hamburgerMenu">
-            <a
+            <motion.a
               href="#"
               onClick={() => setShowMediaIcons(!showMediaIcons)}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
             >
               <GiHamburgerMenu className='hamburg' />
-            </a>
+            </motion.a>
           </div>
 
         </div>
-      </nav>
-
+      </motion.nav>
     </>
   )
 }

@@ -1,3 +1,4 @@
+/* Modern Professional Navbar */
 .navBar{
   display: grid;
   grid-template-columns: 2rem 1fr 3fr 1fr 2rem;
@@ -10,9 +11,23 @@
   border-radius: 20px;
   /* width: 100%; */
   height: 5rem;
-  box-shadow: 0px 3px 8px 2px orange;
-  background-color: #00000063;
-  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 152, 0, 0.1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    0 0 0 1px rgba(255, 152, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navBar:hover {
+  border-color: rgba(255, 152, 0, 0.3);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(255, 152, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 /* Here - Default HTML size - 16px = 1rem*/
@@ -20,8 +35,20 @@
 /* 3.125rem = 50px */
 
 .light .navBar{
-  background: #cbcbcb57;
-  box-shadow: 0px 2px 5px 2px skyblue;
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(0, 187, 255, 0.1);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(0, 187, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.light .navBar:hover {
+  border-color: rgba(0, 187, 255, 0.3);
+  box-shadow: 
+    0 12px 40px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(0, 187, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
   
 /* Setting Logo Part */
@@ -30,28 +57,43 @@
   grid-column: 2/3;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.logo:hover {
+  transform: scale(1.05);
+}
+
 .logo img{
   height: 45px;
-  background-color: #000000;
-  border-radius: 20px;
-  box-shadow: 0px 0px 10px 1px rgba(255, 166, 0, 0.931);
-  will-change: filter;
-  transition: filter,transform 300ms;
+  background: linear-gradient(135deg, rgba(255, 152, 0, 0.1) 0%, rgba(0, 187, 255, 0.1) 100%);
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 
+    0 4px 16px rgba(255, 152, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  will-change: transform, box-shadow;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo img:hover {
-  filter: drop-shadow(0 0 1px orange);
-  transform: scale(1.2);
+  transform: scale(1.1) rotate(2deg);
+  box-shadow: 
+    0 8px 24px rgba(255, 152, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .light .logo img{
-  background: rgba(255, 255, 255, 0.76);
-  box-shadow: 0px 0px 10px 1px skyblue;
+  background: linear-gradient(135deg, rgba(255, 152, 0, 0.05) 0%, rgba(0, 187, 255, 0.05) 100%);
+  box-shadow: 
+    0 4px 16px rgba(0, 187, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
+
 .light .logo img:hover{
-  box-shadow: 0px 0px 10px 1px skyblue;
-  filter: drop-shadow(0px 0px 1px skyblue);
+  box-shadow: 
+    0 8px 24px rgba(0, 187, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 
@@ -71,20 +113,68 @@
   font-size: large;
   padding: 8px;
   border-radius: 10px;
-  transition-property: transform;
-  transition-duration: 0.2s;
-  transition-timing-function: ease;
-  transition-delay: 0.1s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
+
 .menuLinks a{
   text-transform: capitalize;
+  color: var(--color-text-dark);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: transparent;
 }
+
+.menuLinks a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 152, 0, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.menuLinks a:hover::before {
+  left: 100%;
+}
+
 .menuLinks li:hover{
     transform: translateY(-6px);
-    box-shadow: 3px 3px 4px  orange;
+    box-shadow: 0 4px 12px rgba(255, 152, 0, 0.2);
 }
+
+.menuLinks a:hover {
+  color: var(--color-accent);
+  background: rgba(255, 152, 0, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 4px 12px rgba(255, 152, 0, 0.2),
+    0 0 0 1px rgba(255, 152, 0, 0.1);
+}
+
+.light .menuLinks a {
+  color: var(--color-text-light);
+}
+
+.light .menuLinks a:hover {
+  color: var(--color-accent-light);
+  background: rgba(0, 187, 255, 0.1);
+  box-shadow: 
+    0 4px 12px rgba(0, 187, 255, 0.2),
+    0 0 0 1px rgba(0, 187, 255, 0.1);
+}
+
 .light .menuLinks li:hover{
-    box-shadow: 3px 3px 4px  skyblue;
+    box-shadow: 0 4px 12px rgba(0, 187, 255, 0.2);
 } 
 
 
@@ -104,48 +194,43 @@
 .navButtons ul>li{
   list-style: none;
 }
-.light #navBtn{
-  color: black;
-  border: 1px solid skyblue;
-  box-shadow: 0px 0px 4px 2px skyblue;
-  transition: ease-in-out 0.3s;
-}
-.light #navBtn:hover{
-  color: white;
-  transition: ease-in-out 0.3s; 
-  background-color: black;
-  box-shadow: none;
-}
-
-
-/* Rotation Animation */
-@keyframes logo {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(180deg);
-  }
-}
 
 /* **************Dark Mode************** */
 .darkModeBtn{
   margin-right: 25px;
   padding: 1px;
-  width: 29px;
-  height: 29px;
-  border-radius: 50%;
-  box-shadow: 0px 0px 5px 2px orange;
-  border: 1px solid orange;
-  transition: ease-in-out 0.6s;
-}
-.darkModeBtn:hover{
-  box-shadow: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255, 152, 0, 0.1) 0%, rgba(0, 187, 255, 0.1) 100%);
+  color: var(--color-accent);
   border: none;
-  filter: none;
-  color: black;
-  background: white;
-  transition: 0.6s;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.darkModeBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 152, 0, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.darkModeBtn:hover::before {
+  left: 100%;
+}
+
+.darkModeBtn:hover{
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 
+    0 6px 20px rgba(255, 152, 0, 0.3),
+    0 0 0 1px rgba(255, 152, 0, 0.2);
 }
 
 .darkModeBtn:active{
@@ -157,49 +242,108 @@
 .lightModeBtn{
   margin-right: 25px;
   padding: 1px;
-  width: 29px;
-  height: 29px;
-  border-radius: 50%;
-  transition: 2s;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(0, 187, 255, 0.1) 0%, rgba(255, 152, 0, 0.1) 100%);
+  color: var(--color-accent-light);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
+
+.lightModeBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 187, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.lightModeBtn:hover::before {
+  left: 100%;
+}
+
 .lightModeBtn:hover{
-  box-shadow: none;
-  filter: none;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 
+    0 6px 20px rgba(0, 187, 255, 0.3),
+    0 0 0 1px rgba(0, 187, 255, 0.2);
 }
+
 .lightModeBtn:active{
   /* This animation line applies the rotation animation. */
   animation: logo alternate 0.1s linear;
 }
 
+.light #navBtn{
+  color: var(--color-accent-light);
+  background: linear-gradient(135deg, rgba(0, 187, 255, 0.1) 0%, rgba(255, 152, 0, 0.1) 100%);
+}
+
+.light #navBtn:hover{
+  box-shadow: 
+    0 6px 20px rgba(0, 187, 255, 0.3),
+    0 0 0 1px rgba(0, 187, 255, 0.2);
+}
+
 /* Contact Button Design */
 .contactBtn{
-  background-color: transparent;
-  border: 1px solid orange;
-  box-shadow: 0px 0px 5px 2px orange;
-  transition: 0.5s;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-light) 100%);
+  color: var(--color-text-dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 4px 16px rgba(255, 152, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
-.light .contactBtn{
-  color: #000000;
-  background: transparent;
-  border: 1px solid skyblue;
-  box-shadow: 0px 0px 4px 2px  skyblue;
-  transition: 0.5s;
+
+.contactBtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.contactBtn:hover::before {
+  left: 100%;
 }
 
 .contactBtn:hover{
-  filter: none;
-  transform: scale(1.2);
-  background-color: orange;
-  box-shadow: 0px 0px 4px 1px orange;
-  color: #000000;
-  transition: 0.5s;
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 
+    0 8px 24px rgba(255, 152, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.light .contactBtn{
+  background: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-accent) 100%);
+  box-shadow: 
+    0 4px 16px rgba(0, 187, 255, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .light .contactBtn:hover{
-  transform: scale(1.2);
-  background-color: skyblue;
-  box-shadow: 0px 0px 4px  black;
-  transition: ease-in-out 0.5s;
+  box-shadow: 
+    0 8px 24px rgba(0, 187, 255, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 /* #navBtn:focus,
@@ -209,7 +353,38 @@
 
 
 .hamburgerMenu{
-  display: none
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255, 152, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hamburgerMenu:hover {
+  background: rgba(255, 152, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.hamburg {
+  font-size: 1.5rem;
+  color: var(--color-accent);
+  transition: color 0.3s ease;
+}
+
+.light .hamburgerMenu {
+  background: rgba(0, 187, 255, 0.1);
+}
+
+.light .hamburgerMenu:hover {
+  background: rgba(0, 187, 255, 0.2);
+}
+
+.light .hamburg {
+  color: var(--color-accent-light);
 }
 
 /* responsive css style  */
@@ -243,14 +418,16 @@
   }
 
   .mobileMenuLinks {
-    display: grid;
-    grid-column: 2/4;
     position: relative;
     z-index: 99;
   }
 
   .mobileMenuLinks {
-    background-color: black;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 152, 0, 0.2);
+    border-radius: 16px;
     height: 20rem;
     display: grid;
     grid-column: 3/5;
@@ -258,16 +435,17 @@
     padding-left: 3rem;
     transition: all 2s linear;
     transform-origin: top;
-    box-shadow: orange 0px 50px 100px -20px,
-      orange 0px 30px 60px -30px;
-    border: 1px solid orange;
+    box-shadow: 
+      0 12px 40px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(255, 152, 0, 0.1);
   }
 
   .light .mobileMenuLinks {
-    background-color: white;
-    box-shadow: skyblue 0px 50px 100px -20px,
-      skyblue 0px 30px 60px -30px;
-    border: 1px solid skyblue;
+    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(0, 187, 255, 0.2);
+    box-shadow: 
+      0 12px 40px rgba(0, 0, 0, 0.1),
+      0 0 0 1px rgba(0, 187, 255, 0.1);
   }
 
   .mobileMenuLinks ul {
@@ -302,9 +480,9 @@
     justify-self: end;
     align-items: center;
   }
-
+   
   .hamburgerMenu {
-    display: block;
+    display: flex;
     font-size: 2.5rem;
     color: orange;
   }
@@ -337,7 +515,7 @@
   }
 
   .navButtons .hamburgerMenu {
-    display: block;
+    display: flex;
     font-size: 2.5rem;
   }
 
@@ -374,7 +552,90 @@
   }
 
   .navButtons .hamburgerMenu {
-    display: block;
+    display: flex;
     font-size: 2.5rem;
   }
+  
 }
+
+.navbar a {
+  color: var(--color-text-dark);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  position: relative;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+.navbar a:hover {
+  color: var(--color-accent);
+  transform: translateY(-2px);
+  background: rgba(255, 152, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.2);
+}
+
+.navbar a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  transform: translateX(-50%);
+}
+.navbar a:hover::after {
+  width: 80%;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  color: var(--color-accent);
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1) rotate(15deg);
+  background: rgba(255, 152, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
+}
+
+.light .navbar a {
+  color: var(--color-text-light);
+}
+
+.light .navbar a:hover {
+  color: var(--color-accent-light);
+  background: rgba(0, 191, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.2);
+}
+
+.light .navbar a::after {
+  background: var(--color-accent-light);
+}
+
+.light .theme-toggle {
+  color: var(--color-accent-light);
+}
+
+.light .theme-toggle:hover {
+  background: rgba(0, 191, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 191, 255, 0.3);
+}
+
+/* Rotation Animation */
+@keyframes logo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+

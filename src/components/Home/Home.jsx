@@ -2,10 +2,17 @@ import React from 'react'
 import './Home.css'
 import profile from '../../assets/profile-pic.png';
 import profileLight from '../../assets/profile-pic-light.png';
+import { motion } from 'framer-motion';
 
 const Home = ({ theme }) => {
     return (
-        <div id='home' className='homeContainer'>
+        <motion.div
+            className="homeContainer"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+        >
             <div className='about'>
                 <div className='homeProfile'>
                     <img src={(theme == "dark" ? profile : profileLight)} alt="" />
@@ -20,7 +27,7 @@ const Home = ({ theme }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

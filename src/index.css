@@ -1,11 +1,110 @@
+@import "@fontsource/inter/index.css";
+@import "@fontsource/poppins/index.css";
+
 *{
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Inter', 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  transition: background 0.4s, color 0.4s;
+}
+
+:root {
+  --font-main: 'Inter', 'Poppins', sans-serif;
+  --color-bg-dark: #10131a;
+  --color-bg-light: #f7f8fa;
+  --color-text-dark: #f7f8fa;
+  --color-text-light: #10131a;
+  --color-accent: #ff9800;
+  --color-accent-light: #00bfff;
+  --radius: 16px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--color-bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent);
+  border-radius: 8px;
+}
+
+/* Accessibility and Focus Management */
+*:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Smooth Scrolling */
+html {
   scroll-behavior: smooth;
 }
 
-:root::-webkit-scrollbar{
-  display: none;
+/* Skip to Content Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--color-accent);
+  color: var(--color-text-dark);
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 10000;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 6px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  :root {
+    --color-accent: #ff6b00;
+    --color-accent-light: #00a8ff;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .navBar,
+  .footer,
+  .theme-toggle,
+  .hamburgerMenu {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .container {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
 }

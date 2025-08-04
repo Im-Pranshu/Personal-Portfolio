@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const [modalMessage, setModalMessage] = useState('');
@@ -44,34 +45,42 @@ const Contact = () => {
   };
 
   return (
-    <div id='contact' className='componentStyle'>
-      <div className='blurBg'></div>
-      <div className='contDetail'>
-        <h1 className='secTitle'>Contact <span id='spanTitle'>Me</span></h1>
-        <h3>Get in touch with me !</h3>
-
-        <div className='contactForm'>
-          <form id='cForm' className='cForm' onSubmit={handleSubmit}>
-
-            <div className='fname'>
-              <input type="text" placeholder='First Name' name='FirstName' autoComplete='off' required />
-              <input type="text" placeholder='Last Name' name='LastName' autoComplete='off' required />
-            </div>
-
-            <div className='details'>
-              <input type="email" placeholder='Email ID' name='Email' autoComplete='off' required />
-              <input type="number" placeholder='Phone Number' name='PhoneNo' autoComplete='off' required />
-              <textarea type="text" id="message" name="Message" rows="5" placeholder='Message' autoComplete='off' required></textarea>
-            </div>
-
-            <div className='formBtn'>
-              <input id='submit' className='formBtnStyle' type="submit" />
-              <input id='reset' className='formBtnStyle' type="reset" />
-            </div>
-          </form>
+    <motion.div id='contact' className='componentStyle'
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.6 }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
+    >
+      {/* Removed blurBg for modern card look */}
+      <motion.div
+        className="contactContainer"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
+      >
+        <div className='contDetail'>
+          <h1 className='secTitle'>Contact <span id='spanTitle'>Me</span></h1>
+          <h3>Get in touch with me !</h3>
+          <div className='contactForm'>
+            <form id='cForm' className='cForm' onSubmit={handleSubmit}>
+              <div className='fname'>
+                <input type="text" placeholder='First Name' name='FirstName' autoComplete='off' required />
+                <input type="text" placeholder='Last Name' name='LastName' autoComplete='off' required />
+              </div>
+              <div className='details'>
+                <input type="email" placeholder='Email ID' name='Email' autoComplete='off' required />
+                <input type="number" placeholder='Phone Number' name='PhoneNo' autoComplete='off' required />
+                <textarea type="text" id="message" name="Message" rows="5" placeholder='Message' autoComplete='off' required></textarea>
+              </div>
+              <div className='formBtn'>
+                <input id='submit' className='formBtnStyle' type="submit" />
+                <input id='reset' className='formBtnStyle' type="reset" />
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
-
+      </motion.div>
       {/* Modal HTML */}
       {showModal && (
         <div id="myModal" className="modal" style={{ display: 'block' }}>
@@ -81,7 +90,7 @@ const Contact = () => {
           </div>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 

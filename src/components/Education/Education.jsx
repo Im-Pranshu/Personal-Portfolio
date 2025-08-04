@@ -1,61 +1,71 @@
 import React from 'react'
 import './Education.css'
-import highSchool from "../../assets/high_school.jpg"
-import intermediateSchool from "../../assets/intermediate_school.jpg"
-import college from "../../assets/college.jpg"
+import { FaSchool, FaUserGraduate, FaUniversity } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const Education = () => {
     return (
-        <div id='education'>
-            {/* added this this div align h1 on center without affecting grid of content. */}
+        <motion.div
+            className="skillsContainer"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: false, amount: 0.1 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+        >
             <div className="componentStyle">
                 <h1 className='secTitle'>My <span id='spanTitle'>Education</span></h1>
             </div>
 
             <div className='eduList card-list'>
-                <div className='eduListItem card'>
-
-                    <div className="highSchool bgCard"></div>
+                <motion.div className='eduListItem card'
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false, amount: 0.3 }}
+                    transition={{ duration: 0.7, ease: 'easeOut' }}
+                >
+                    <div className="eduIcon"><FaSchool size={48} /></div>
                     <div className='aboutEdu'>
                         <h3>High School</h3>
                         <h4>Krishna Education Centre</h4>
                         <p>2017-18</p>
                         <p>Scored 79%</p>
+                        <a className='eduViewBtn' href="https://tinyurl.com/10th-Marksheet-Pranshu-Sharma" target='_blank'>View</a>
                     </div>
-                    <div className='hoverLayer'>
-                        <a href="https://tinyurl.com/10th-Marksheet-Pranshu-Sharma" target='_blank'>View</a>
-                    </div>
-                </div>
+                </motion.div>
 
-                <div className='eduListItem card'>
-                    {/* <img src={intermediateSchool} alt="project image" /> */}
-                    <div className="intermediate bgCard"></div>
+                <motion.div className='eduListItem card'
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false, amount: 0.3 }}
+                    transition={{ duration: 0.7, ease: 'easeOut', delay: 0.1 }}
+                >
+                    <div className="eduIcon"><FaUserGraduate size={48} /></div>
                     <div className='aboutEdu'>
                         <h3>Intermediate </h3>
                         <h4>Krishna Education Centre</h4>
                         <p>2019-20</p>
                         <p>Scored 73%</p>
+                        <a className='eduViewBtn' href="https://tinyurl.com/12th-Marksheet-Pranshu-Sharma" target='_blank'>View</a>
                     </div>
-                    <div className='hoverLayer'>
-                        <a href="https://tinyurl.com/12th-Marksheet-Pranshu-Sharma" target='_blank'>View</a>
-                    </div>
-                </div>
+                </motion.div>
 
-                <div className='eduListItem card'>
-                    {/* <img src={college} alt="project image" /> */}
-                    <div className="college bgCard"></div>
+                <motion.div className='eduListItem card'
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: false, amount: 0.3 }}
+                    transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
+                >
+                    <div className="eduIcon"><FaUniversity size={48} /></div>
                     <div className='aboutEdu'>
                         <h3>B.Tech CSE</h3>
                         <h4>Axis Colleges</h4>
                         <p>2021-2025</p>
-                        <p>CGPA:7.0</p>
+                        <p>CGPA:7.1</p>
+                        <a className='eduViewBtn' href="#">View</a>
                     </div>
-                    <div className='hoverLayer'>
-                        <a href="#">View</a>
-                    </div>
-                </div>
+                </motion.div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
